@@ -1,144 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Somia Saber | Full-Stack Engineer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
-    .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(45, 212, 191, 0.1) 0%, rgba(15, 23, 42, 1) 100%); }
-    .card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); transition: 0.3s; }
-    .card:hover { border-color: #2dd4bf; transform: translateY(-5px); }
-    .btn-primary { background: linear-gradient(90deg, #2dd4bf, #0ea5e9); transition: 0.3s; }
-    .btn-primary:hover { opacity: 0.9; transform: scale(1.05); }
-    .tech-tag { background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); color: #2dd4bf; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somia Saber | Full-Stack Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bg-color: #030712;
+            --card-bg: #111827;
+            --accent: #2dd4bf; /* Teal like the original */
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+
+        .nav-glass {
+            background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% -20%, #111827 0%, #030712 100%);
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #030712;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.3);
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="fixed w-full z-50 bg-[#0f172a]/80 backdrop-blur-lg border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold tracking-tighter">SOMIA<span class="text-teal-400">.S</span></div>
-      <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
-        <a href="#about" class="hover:text-teal-400 transition">About</a>
-        <a href="#experience" class="hover:text-teal-400 transition">Experience</a>
-        <a href="#projects" class="hover:text-teal-400 transition">Projects</a>
-        <a href="#contact" class="text-white border border-teal-400/50 px-4 py-1.5 rounded-full hover:bg-teal-400 hover:text-slate-900 transition">Let's Talk</a>
-      </div>
-    </div>
-  </nav>
-
-  <section id="about" class="hero-gradient min-h-screen flex flex-col justify-center items-center px-6 text-center">
-    <div class="mb-6 px-4 py-1 text-xs font-bold uppercase tracking-widest text-teal-400 border border-teal-400/20 rounded-full">Available for Remote Work</div>
-    <h1 class="text-5xl md:text-8xl font-extrabold mb-6">Somia Saber <span class="text-teal-400">Shaaban</span></h1>
-    <p class="text-lg md:text-xl text-slate-400 max-w-3xl mb-10 leading-relaxed">
-      Full-Stack Developer specializing in <b>PHP (Laravel)</b>. Expert in building scalable apps, maintaining production systems, and deploying via <b>AWS Vapor</b>.
-    </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="https://www.linkedin.com/in/somia-saber/" target="_blank" class="btn-primary text-slate-900 px-8 py-3 rounded-xl font-bold flex items-center gap-2"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
-      <a href="https://github.com/Somia-Saber" target="_blank" class="card px-8 py-3 rounded-xl font-bold flex items-center gap-2"><i class="fab fa-github"></i> GitHub</a>
-    </div>
-  </section>
-
-  <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-3xl font-bold mb-12 flex items-center gap-4"><span class="w-12 h-px bg-teal-400"></span> Experience</h2>
-    <div class="grid gap-8">
-      <div class="card p-8 rounded-[2rem]">
-        <div class="flex flex-col md:flex-row justify-between mb-4">
-          <h3 class="text-xl font-bold">Full Stack Developer – Alshalahyoffice</h3>
-          <span class="text-teal-400 font-semibold italic">Oct 2025 – Present</span>
+    <nav class="nav-glass fixed w-full z-50 top-0">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight">Somia<span class="text-teal-400">.Saber</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
         </div>
-        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-          Maintained and enhanced production Laravel & Vue.js applications, managed source control via GitHub, and handled deployments using <b>AWS Vapor</b>.
+    </nav>
+
+    <section id="about" class="hero-gradient pt-40 pb-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Full-Stack <span class="text-teal-400">Engineer</span>
+            </h1>
+            <p class="text-lg text-gray-400 leading-relaxed mb-10">
+                Experienced in building scalable applications with <b>PHP (Laravel)</b> and <b>Angular</b>. 
+                Passionate about <b>AI-driven solutions</b> and <b>SOC</b> operations. Based in Giza, Egypt.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:somiasaber2000@gmail.com" class="btn-primary px-8 py-3 rounded-full font-semibold">Get in touch</a>
+                <a href="https://github.com/Somia-Saber" target="_blank" class="px-8 py-3 rounded-full border border-gray-800 font-semibold hover:bg-white/5 transition">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="max-w-4xl mx-auto px-6 py-24">
+        <h2 class="text-2xl font-bold mb-12">Experience</h2>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l border-gray-800">
+                <div class="absolute w-3 h-3 bg-teal-400 rounded-full -left-[6px] top-2"></div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold">Full Stack Developer</h3>
+                    <span class="text-sm text-gray-500 italic">Oct 2025 – Present</span>
+                </div>
+                <p class="text-teal-400 font-medium mb-4 uppercase text-xs tracking-wider">Alshalahyoffice</p>
+                <ul class="text-gray-400 text-sm space-y-2 leading-relaxed">
+                    <li>• Building and maintaining production-grade applications using Laravel & Vue.js.</li>
+                    <li>• Managing deployments via AWS Vapor and version control with GitHub.</li>
+                    <li>• Optimizing MySQL databases and implementing AI-driven features.</li>
+                </ul>
+            </div>
+
+            <div class="relative pl-8 border-l border-gray-800">
+                <div class="absolute w-3 h-3 bg-gray-700 rounded-full -left-[6px] top-2"></div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold">SOC Specialist Trainee</h3>
+                    <span class="text-sm text-gray-500 italic">Jan 2025 – April 2025</span>
+                </div>
+                <p class="text-teal-400 font-medium mb-4 uppercase text-xs tracking-wider">WE Innovate Cybersecurity Academy</p>
+                <p class="text-gray-400 text-sm">Threat monitoring, SIEM tools, and security operations training.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-24 border-t border-gray-900">
+        <h2 class="text-2xl font-bold mb-12 text-center">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="project-card p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Time Schedule Management</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">System for Ain Shams University to automate academic scheduling using PHP & MySQL.</p>
+                </div>
+                <a href="https://somia-saber.github.io/Time-Schedule-Management-System/" target="_blank" class="text-teal-400 text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    LIVE PREVIEW <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project-card p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Dental X-Ray AI Analysis</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Graduation project (A+) using Deep Learning (U-Net & YOLOv5) to assist dentists.</p>
+                </div>
+                <a href="https://somia-saber.github.io/Dental-X-Ray-AI-Analysis/" target="_blank" class="text-teal-400 text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    VIEW CASE STUDY <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project-card p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">IEEE FUE Website</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Full front-end development using Angular, Bootstrap, and JavaScript.</p>
+                </div>
+                <a href="https://www.linkedin.com/in/somia-saber" target="_blank" class="text-teal-400 text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    VIEW SOURCE <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project-card p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Gulf Times (Qatar)</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Back-end development and mail server integration using PHP & IIS.</p>
+                </div>
+                <a href="https://www.linkedin.com/in/somia-saber" target="_blank" class="text-teal-400 text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    VIEW DETAILS <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-24">
+        <h2 class="text-2xl font-bold mb-10">Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" target="_blank" class="skill-badge p-4 rounded-xl flex items-center justify-between hover:bg-white/5 transition">
+                <span class="text-sm font-medium">FUE Bachelor’s Degree (GPA: A+)</span>
+                <i class="fas fa-external-link-alt text-gray-600 text-xs"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" target="_blank" class="skill-badge p-4 rounded-xl flex items-center justify-between hover:bg-white/5 transition">
+                <span class="text-sm font-medium">SOC Specialist - WE INNOVATE</span>
+                <i class="fas fa-external-link-alt text-gray-600 text-xs"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" target="_blank" class="skill-badge p-4 rounded-xl flex items-center justify-between hover:bg-white/5 transition">
+                <span class="text-sm font-medium">Angular Development - AITB</span>
+                <i class="fas fa-external-link-alt text-gray-600 text-xs"></i>
+            </a>
+            <div class="skill-badge p-4 rounded-xl flex items-center justify-between">
+                <span class="text-sm font-medium text-gray-400">ICPC Certificate of Achievement</span>
+                <i class="fas fa-trophy text-yellow-600 text-xs"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-3xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-3xl font-bold mb-4">Let's work together</h2>
+        <p class="text-gray-400 mb-10 leading-relaxed">
+            I'm currently looking for new remote opportunities. If you have a question or just want to say hi, my inbox is always open.
         </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag">Laravel</span><span class="tech-tag">Vue.js</span><span class="tech-tag">AWS Vapor</span><span class="tech-tag">MySQL</span>
-        </div>
-      </div>
-      <div class="card p-8 rounded-[2rem] border-l-4 border-teal-400">
-        <h3 class="text-xl font-bold mb-1 text-white">SOC Specialist Trainee</h3>
-        <p class="text-teal-400 text-xs font-bold mb-4 uppercase tracking-tighter">WE Innovate Cybersecurity Academy | 2025</p>
-        <p class="text-slate-400 text-sm">Practical training in SOC operations, threat monitoring, and SIEM tools.</p>
-      </div>
-    </div>
-  </section>
+        <a href="mailto:somiasaber2000@gmail.com" class="text-2xl md:text-4xl font-bold text-teal-400 hover:underline transition-all">
+            somiasaber2000@gmail.com
+        </a>
+    </section>
 
-  <section id="projects" class="max-w-7xl mx-auto px-6 py-24 bg-slate-900/50 rounded-[3rem]">
-    <h2 class="text-3xl font-bold mb-16 text-center">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card p-6 rounded-3xl">
-        <h4 class="text-xl font-bold mb-3 text-white">Time Schedule Management</h4>
-        <p class="text-slate-400 text-xs mb-6 h-12 overflow-hidden">Collaborated with Ain Shams University for web-based scheduling.</p>
-        <div class="flex gap-4 mt-auto">
-          <a href="https://somia-saber.github.io/Time-Schedule-Management-System/" target="_blank" class="text-teal-400 text-[10px] font-extrabold tracking-widest uppercase hover:underline">View Website</a>
+    <footer class="max-w-5xl mx-auto px-6 py-12 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-500 text-sm">© 2026 Somia Saber Shaaban. Built with Laravel & Angular mindsets.</p>
+        <div class="flex space-x-6">
+            <a href="https://www.linkedin.com/in/somia-saber" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a>
+            <a href="https://github.com/Somia-Saber" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-lg"></i></a>
         </div>
-      </div>
-      <div class="card p-6 rounded-3xl">
-        <h4 class="text-xl font-bold mb-3">Dental X-Ray AI (Grade A+)</h4>
-        <p class="text-slate-400 text-xs mb-6 h-12 overflow-hidden">Deep learning model for panoramic dental X-rays using YOLOv5 & U-Net.</p>
-        <div class="flex gap-4">
-          <a href="https://github.com/Somia-Saber" target="_blank" class="text-teal-400 text-[10px] font-extrabold tracking-widest uppercase hover:underline">Demo</a>
-          <a href="https://github.com/Somia-Saber" target="_blank" class="text-slate-500 text-[10px] font-extrabold tracking-widest uppercase hover:underline">Paper</a>
-        </div>
-      </div>
-      <div class="card p-6 rounded-3xl">
-        <h4 class="text-xl font-bold mb-3">IEEE FUE Website</h4>
-        <p class="text-slate-400 text-xs mb-6 h-12 overflow-hidden">Responsive UI developed with Angular and Bootstrap.</p>
-        <div class="flex gap-4">
-          <a href="https://github.com/Somia-Saber" target="_blank" class="text-teal-400 text-[10px] font-extrabold tracking-widest uppercase hover:underline">View Source</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-2xl font-bold mb-10 text-teal-400 italic">Honors & Certifications</h2>
-    <div class="grid md:grid-cols-2 gap-4 text-sm">
-      <div class="card p-4 rounded-xl flex items-center justify-between">
-        <span>Bachelor’s Degree - FUE (GPA: A+)</span>
-        <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" class="text-teal-400"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <div class="card p-4 rounded-xl flex items-center justify-between">
-        <span>Security Operations Center (SOC) - WE INNOVATE</span>
-        <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" class="text-teal-400"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <div class="card p-4 rounded-xl flex items-center justify-between">
-        <span>Angular Development - AITB</span>
-        <a href="https://www.linkedin.com/in/somia-saber/details/certifications/" class="text-teal-400"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <div class="card p-4 rounded-xl flex items-center justify-between">
-        <span>ICPC Programming Achievement</span>
-        <i class="fas fa-trophy text-yellow-500"></i>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="max-w-4xl mx-auto px-6 py-24">
-    <div class="card p-12 rounded-[3rem] text-center border-teal-400/30">
-      <h2 class="text-4xl font-bold mb-4">Start a Conversation</h2>
-      <p class="text-slate-400 mb-10">I'm currently open to Full-time remote opportunities.</p>
-      <form action="mailto:somiasaber2000@gmail.com" method="post" enctype="text/plain" class="grid gap-4 text-left">
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Full Name" class="bg-slate-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400" required>
-          <input type="email" placeholder="Email Address" class="bg-slate-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400" required>
-        </div>
-        <textarea rows="4" placeholder="Your Message" class="bg-slate-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400" required></textarea>
-        <button type="submit" class="btn-primary py-4 rounded-xl text-slate-900 font-bold text-lg">Send Message Directly</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="py-12 border-t border-white/5 text-center text-slate-500 text-xs">
-    <div class="flex justify-center space-x-6 text-xl mb-6">
-      <a href="https://github.com/Somia-Saber" target="_blank" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/somia-saber/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:somiasaber2000@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>Handcrafted by Somia Saber © 2026 | Based in Giza, Egypt</p>
-  </footer>
+    </footer>
 
 </body>
 </html>
